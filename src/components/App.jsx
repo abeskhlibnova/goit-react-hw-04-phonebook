@@ -1,16 +1,15 @@
+import Phonebook from './Phonebook';
+import { PhonebookBox } from './Phonebook.styled';
+import ErrorBoundary from './ErrorBoundary';
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+    return (
+        <ErrorBoundary>
+       <PhonebookBox>
+            <Phonebook />
+        </PhonebookBox>
+
+       </ErrorBoundary>
+ 
+    );
 };
